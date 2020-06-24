@@ -1,0 +1,110 @@
+.mountingWrapper {
+    z-index: 9;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    height: calc(100% - 60px);
+    .mountingSearch {
+      position: relative;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      .keywords {
+        width: 80px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-left: 2px solid #00ffff;
+      }
+      :global(.ant-select-selection) {
+        width: 150px;
+        background-color: #102044;
+        border: 1px solid #0f355a;
+        outline: none;
+      }
+      :global(.ant-select-selection:active) {
+        box-shadow: none;
+      }
+      .searchIconBox {
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+        .searchIcon {
+          padding: 10px 20px;
+          margin-left: 10px;
+          background: url(../imgs/searchIcon.png) center center no-repeat;
+        }
+      }
+    }
+
+
+
+    .mountingManage {
+      // height: calc(100% - 100px);
+      .mountingTable {
+        height: 100%;
+        .mountingThead {
+          font-size: 12px;
+          height: 25px;
+          color: #95EDF4;
+          display: flex;
+        }
+        .mountingTr {
+          height: 25px;
+          display: flex;
+        }
+        .mountingThead {
+          background-color: rgba(14, 28, 63, .7);
+        }
+        .mountingTh, .mountingTd {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .deviceMsg {
+          margin-right: 20px;
+          color: #07a8ff;
+        }
+        .mountingTr:nth-child(odd) {
+          background-color: rgba(14, 50 ,98, .7);
+        }
+        .mountingTr:nth-child(even) {
+          background-color: rgba(14, 28, 63, .7);
+        }
+        .mountingTbody {
+          // height: calc(100% - 50px);
+          overflow-y: auto;
+        }
+      }
+    }
+    .paginationBox {
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+      :global(.ant-pagination-prev .ant-pagination-item-link) {
+        background-color: transparent;
+      }
+      :global(.ant-pagination-next .ant-pagination-item-link) {
+        background-color: transparent;
+      }
+      :global(.ant-pagination-item) {
+        background-color: transparent;
+      }
+      :global(.ant-pagination-item a) {
+        color: #fff;
+      }
+      :global(.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis) {
+        color: #fff;
+      }
+      :global(.ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis) {
+        color: #fff;
+      }
+      :global(.ant-pagination-options-quick-jumper input) {
+        background-color: transparent;
+        color: #fff;
+      }
+    }
+  }

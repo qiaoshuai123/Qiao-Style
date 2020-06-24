@@ -1,0 +1,68 @@
+                    <div className={`${styles.operationTop_box} ${styles.operationTopRightFor}`}>
+                        <div className={styles.operationTopLeft}>待维护</div>
+                        <div className={styles.operationTopRight} ><span>{acceptNum}</span>个</div>
+                    </div>
+
+  <div className={classNames(styles.road_show_item, styles.buling)}>
+
+                       const { option } = this.state;
+                        const cavs = this.refs.cavs;
+                        const myChart = echarts.init(cavs);
+                        myChart.setOption(optio                 
+
+     ref={(input) => { this.searchInputBox = input }}n);
+
+.speciaContainerLB_bom {
+  :global(.ant-select) {
+    height: 30px;
+  }
+  :global(.ant-select-selection) {
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    background-color: #023052;
+    border: 1px solid #1d425f;
+  }
+  :global(.ant-select-selection--single .ant-select-selection__rendered) {
+    height: 30px;
+    line-height: 30px;
+  }
+  :global(path) {
+    color: white;
+  }
+}
+
+
+.addGreenMegsBox {
+  :global(.ant-input) {
+    color: white;
+    background-color: #023052;
+    border: 1px solid #1d425f;
+  }
+  :global(.ant-select .ant-select-enabled) {
+    flex: 1;
+  }
+  :global(.ant-select-selection) {
+    color: white;
+    height: 31px;
+    background-color: #023052;
+    border: 1px solid #1d425f;
+  }
+  :global(path) {
+    color: white;
+  }
+
+  :global(.ant-input-search) {
+    flex: 2;
+    height: 31px;
+  }
+}
+
+显示一圈特效       box-shadow: 0 0 10px #0194c0 inset, 0 0 30px #0194c0;
+
+box-shadow: inset 0 0 8px #029fb7; // 盒子阴影
+
+  background: linear-gradient(to bottom, #02183d, #06234f; // 背景渐变
+
+
+"dev": "cross-env http_ENV=development webpack-dev-server --devtool eval --progress --colors --hot --host 192.168.1.133 --open --content-base build"
