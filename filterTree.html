@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const menuList = [
+            {
+                name: 'tab1',
+                role: ['权限1'],
+                children: [
+                    {
+                        name: 'tab1-1',
+                        role: ['权限1'],
+                    },
+                    {
+                        name: 'tab1-2',
+                        role: ['权限2'],
+                    },
+                    {
+                        name: 'tab1-3',
+                        role: ['权限1'],
+                    }
+                ]
+            },
+            {
+                name: 'tab2',
+                role: ['权限2'],
+                children: [
+                    {
+                        name: 'tab2-1',
+                        role: ['权限2'],
+                    },
+                    {
+                        name: 'tab2-2',
+                        role: ['权限2'],
+                    },
+                    {
+                        name: 'tab2-3',
+                        role: ['权限1'],
+                    }
+                ]
+            },
+            {
+                name: 'tab3',
+                role: ['权限1'],
+            }
+        ]
+        const myMenuCode = '权限1'
+
+        const filterMenu = (menuList, menuCode) => {
+            
+            return menuList.filter(item => {
+                return item.role.includes(menuCode)
+            }).map(item => {
+                item = Object.assign({}, item)
+                if (item.children) {
+                    item.children = filterMenu(item.children, menuCode)
+                }
+                return item
+            })
+        }
+
+        // 过滤后的菜单
+        const myMenu = filterMenu(menuList, myMenuCode)
+        console.log(myMenu)
+    </script>
+</body>
+
+</html>
