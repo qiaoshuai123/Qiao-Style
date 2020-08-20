@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Promise 解决异步
+        function Time() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(123)
+                }, 1000);
+            })
+        }
+        Time().then(res => {
+            console.log(res)
+        })
+
+        // function timeout(ms) {
+        //     return new Promise((resolve) => {
+        //         setTimeout(() => {
+        //             resolve(123456)
+        //         }, ms);
+        //     });
+        // }
+
+        // async function asyncPrint(value, ms) {
+        //     const a = await timeout(ms);
+        //     console.log(a, value);
+        // }
+        // asyncPrint('hello world', 2000);
+    </script>
+</body>
+
+</html>
